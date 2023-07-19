@@ -2,14 +2,14 @@
 
 <p align="center">
     <a href="https://www.ninergames.com/" target="_blank">
-        <img src="LOGO.png" alt="Logo of Niner Games" width="300" height="300">
+        <img src="LOGO.png" alt="Logo of AI Metric" width="500" height="170">
     </a><br />
     <a href="https://www.yiiframework.com/" target="_blank">
         <img src="https://www.yiiframework.com/image/yii_logo_light.svg" width="400" alt="Yii Framework" />
     </a>
 </p>
 
-<h1 align="center">Niner Games Template Repository</h1><br />
+<h1 align="center">AI Metric Template Repository</h1><br />
 
 This is a general overview. For technical information, follow to the [TECH.md](TECH.md) file. For legal stuff -- to [LICENSE.md](LICENSE.md).
 

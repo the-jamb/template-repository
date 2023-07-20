@@ -20,10 +20,16 @@ GitHub repos. While most of our repos, created based on this template, will be _
 This is a template repository that  contains information mostly on technical stuff etc. Feel free to rip off this  part 
 (or any other in this document) and replace it with actual content about your repository.
 
-- [Tools](#tools)
-    * [Passwords and keys](#passwords-and-keys)
-    * [JavaScript and JSON tools](#javascript-and-json-tools)
+- [General tools](#general-tools)
     * [Domains](#domains)
+    * [Passwords](#passwords)
+    * [Screen share](#screen-share)
+    * [Remote control](#remote-control)
+- [Developer tools](#developer-tools)
+    * [JavaScript and JSON tools](#javascript-and-json-tools)
+    * [JitBit's CSS and SSL checker](#jitbits-css-and-ssl-checker)
+- [Tools for testers](#tools-for-testers)
+    * [Screen capture](#screen-capture)
 - [Diagrams](#diagrams)
     * [Example](#example)
     * [Source code](#source-code)
@@ -34,29 +40,10 @@ This is a template repository that  contains information mostly on technical stu
 - [Releases](#releases)
 - [Table of Contents](#table-of-contents)
 
-This in-line ToC has been generated using [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/). 
+This in-line ToC has been generated using [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/).
 For details, see [end of this document](#table-of-contents).
 
-## Tools 
-
-### Passwords and keys
-
-If we need to generate some random password or key, the [RandomKeygen](https://randomkeygen.com/) service seems great!
-
-Not only it generates **30+ passwords** at once (with each button press or browser refresh), but it also splits them by function (i.e. _strong passwords_, _memorable 
-passwords_, _WPA_ or _WEP_ keys, etc.).
-
-### JavaScript and JSON tools
-
-Should any of our code include any piece of _JavaScript_ or _JSON_ we can consider these ones:
-
-- JavaScript:
-    * [ValidateJavaScript](https://validatejavascript.com/): as name says, good and challenging JavaScript linter
-    * [JSCompress](https://jscompress.com/): strong JavaScript compressor (works on in-line code or uploaded files)
-- JSONCompare: [beautify, minify, sort, save](https://jsoncompare.com/#!/simple/) (for sharing) and [lint](https://jsoncompare.com/#!/simple/) 
-or [compare two sets](https://jsoncompare.com/#!/diff/) (can work on files)
-
-Note that these are overloaded with ads. But, nothing is for free. Sorry, _taki mamy klimat_.
+## General tools
 
 ### Domains
 
@@ -71,6 +58,76 @@ It assumes domains:
 - With full **ownership only** (no domain options, no domain lease)
 
 And it displays all (most) results on a single page, sorted from cheapest to the most expensive ones.
+
+### Passwords
+
+If we need to generate some random password or key, the [RandomKeygen](https://randomkeygen.com/) service seems great!
+
+Not only it generates **30+ passwords** at once (with each button press or browser refresh), but it also splits them by
+function (i.e. _strong passwords_, _memorable passwords_, _WPA_ or _WEP_ keys, etc.).
+
+### Screen share
+
+We can setup an ultra-quick 1-to-1 video meeting (screen share) without any account etc. using [JitBit's Screen Sharing tool](https://www.jitbit.com/screensharing/#6449989286775993220).
+All you need is to: open this page, click _Share My Screen_ and send someone an auto-generated link.
+
+This is a truly peer-to-peer solution. Meaning that no server is involved (and no account is needed), but whenever third
+and any following person tries to use the same link, they will hit the wall with never-ending spinner (best case scenario)
+or it will connection for everyone, including people already connected (worst case scenario).
+
+### Remote control
+
+A big advantage of the above solution in many scenarios is that it is a _read-only screen share_. Meaning that person that
+uses provided link cannot control remote device in any way.
+
+For true remote control of some PC, [Parsec](https://support.parsec.app/hc/en-us/articles/4422936497165) seems like super
+great alternative to idiotic TeamViewer's licenses. It works pretty much the same as TeamViewer (requires a standalone
+software to be installed on both server and all clients, requires an account and sign-in etc.). But it's free plan offers
+much more options. To the point that [paid plans](https://parsec.app/pricing) are not needed in most scenarios. And, if
+even needed, license prices are way, way less insane (in compare to TeamViewer) -- $30 per user/month, paid annually.
+
+## Developer tools
+
+### JavaScript and JSON tools
+
+Should any of our code include any piece of _JavaScript_ or _JSON_ we can consider these ones:
+
+- JavaScript:
+    * [ValidateJavaScript](https://validatejavascript.com/): as name says, good and challenging JavaScript linter
+    * [JSCompress](https://jscompress.com/): strong JavaScript compressor (works on in-line code or uploaded files)
+- JSONCompare: [beautify, minify, sort, save](https://jsoncompare.com/#!/simple/) (for sharing) and [lint](https://jsoncompare.com/#!/simple/)
+  or [compare two sets](https://jsoncompare.com/#!/diff/) (can work on files)
+
+Note that these are overloaded with ads. But, nothing is for free. Sorry, _taki mamy klimat_.
+
+### JitBit's CSS and SSL checker
+
+We can use [Unused CSS](https://www.jitbit.com/unusedcss/) scanner to find all obsolete CSS selectors. This is a website
+crawler, so it starts with the provided start page URL and then follows internal links recursively to scan all pages and
+check, if there are any unused CSS selectors there.
+
+The similar technique is used in [SSL Checker](https://www.jitbit.com/sslcheck/) which recursively to scans all pages and
+pages of a HTTPS-website to find any non-secure image, script or CSS file. That will most likely trigger a "mixed content"
+message in browser.
+
+## Tools for testers
+
+### Screen capture
+
+For quick screen captures, [Microsoft Snipping Tool](https://apps.microsoft.com/store/detail/snipping-tool/9MZ95KL8MR0L)
+(also known as Snip & Sketch) is your friend. It has all that is needed, including quick annotations etc. It comes built-in
+to most recent version of Windows. It only requires one-time setup in [Windows _Ease of Access_ section](https://pureinfotech.com/set-print-screen-key-screenshot-screen-sketch-windows-10/)
+in order to use it with <kbd>PrtSc</kbd> key instead of the default one.
+
+To capture entire animation, including mouse clicks etc. we use [free LICPcap](https://www.cockos.com/licecap/). The most
+important feature of it is that it produces _.gif_ animations that can be very easily uploaded to any ticket, page etc.
+
+The down side is that it is a separate software that needs to be installed on your computer. An on-line alternative is to
+use [JitBit's Screen Capture](https://www.jitbit.com/screencapture/). In is even quicker for capturing a video describing
+some problem, but it produces _.webm_ video files instead of _.gif_ pictures. So this can't be uploaded to many places.
+
+Big advantage of JitBit's tool (and _.webm_ format) is that it allows to record screen capture _with sound_ captured from
+system microphone. Which can be very useful in many scenarios.
 
 ## Diagrams
 

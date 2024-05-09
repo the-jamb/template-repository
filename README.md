@@ -2,246 +2,222 @@
 
 <p align="center">
     <a href="https://www.ninergames.com/" target="_blank">
-        <img src="LOGO.png" alt="Logo of AI Metric" width="500" height="170">
+        <img src="https://github.com/the-jamb/template-repository/assets/2903392/3ee5f383-ebab-42bc-9204-0ed2c2b550de" alt="Logo of AI Metric" width="500" height="500">
     </a><br />
-    <a href="https://www.yiiframework.com/" target="_blank">
-        <img src="https://www.yiiframework.com/image/yii_logo_light.svg" width="400" alt="Yii Framework" />
-    </a>
 </p>
 
-<h1 align="center">AI Metric Template Repository</h1><br />
+<h1 align="center">Jamb Template Repository</h1><br />
 
-This is a general overview. For technical information, follow to the [TECH.md](TECH.md) file. For legal stuff -- to [LICENSE.md](LICENSE.md).
-
-This README file is very large. We keep all the technical stuff, information, tools etc. in here. This is intentional.
-We don't want to put this information into Wiki (where it belongs). Wikis are available free of charge only in **public**
-GitHub repos. While most of our repos, created based on this template, will be _private_.
-
-This is a template repository that  contains information mostly on technical stuff etc. Feel free to rip off this  part 
+This is a template repository that contains information mostly on technical stuff etc. Feel free to rip off this  part 
 (or any other in this document) and replace it with actual content about your repository.
 
 - [General tools](#general-tools)
-    * [Domains](#domains)
-    * [Passwords](#passwords)
-    * [Screen share](#screen-share)
-    * [Remote control](#remote-control)
+  * [Passwords](#passwords)
+  * [Screen share](#screen-share)
 - [Developer tools](#developer-tools)
-    * [JavaScript and JSON tools](#javascript-and-json-tools)
-    * [JitBit's CSS and SSL checker](#jitbits-css-and-ssl-checker)
-- [Tools for testers](#tools-for-testers)
-    * [Screen capture](#screen-capture)
+  * [Base64](#base64)
+  * [JavaScript](#javascript)
+  * [JSON](#json)
+  * [Markdown](#markdown)
+  * [Website optimization](#website-optimization)
+  * [Screen capture](#screen-capture)
 - [Diagrams](#diagrams)
-    * [Example](#example)
-    * [Source code](#source-code)
-    * [Live editor](#live-editor)
-    * [Mermaid Generator](#mermaid-generator)
-    * [Other diagrams](#other-diagrams)
-    * [Kroki.io service](#krokiio-service)
+  * [Example](#example)
+  * [Source code](#source-code)
+  * [Tools](#tools)
+  * [Other diagram types](#other-diagram-types)
+  * [Kroki.io service](#krokiio-service)
 - [Releases](#releases)
-- [Table of Contents](#table-of-contents)
 
-This in-line ToC has been generated using [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/).
-For details, see [end of this document](#table-of-contents).
+This in-line ToC has been generated using [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/).  For details, see [end of this document](#table-of-contents).
 
-## General tools
+# General tools
 
-### Domains
+## Passwords
 
-"_Every good project starts with its own domain name and a logo_" (Tomasz Trejderowski)
+If we need to generate some random password or key, the [RandomKeygen](https://randomkeygen.com/) service seems to be a great replacement!
 
-Should we need to buy some nice, possibly cheap domain name, we can use [this AfterMarket link](https://www.aftermarket.pl/Market/List/?domain=&page=1&length1=&length2=&price1=&price2=777&price3=PLN&extension=&category=&type=listing&start1=&start2=&idn=0&seller=&bin=1&auction=-1&offers=1&hire=0&rental=-1&group=0&lastminute=0&is_catch=0&future=-1&_sort=price-&_count=300&_start=0).
+It groups generated passwords by the possible usage type:
 
-It assumes domains:
+- Memorable, strong and very strong passwords
+- WPA keys (regular 160-bit and 504-bit "monsters")
+- WEP Keys (64-bit, 128-bit, 152-bit and 256-bit keys)
+- CodeIgniter Encryption Keys (or for any other 256-bit key requirement)
 
-- Not more expensive than **777 PLN**
-- **Ready to purchase** (direct buy, no auctions)
-- With full **ownership only** (no domain options, no domain lease)
+It generates a set of 38 passwords at once. Each of them can be copied by simply clicking it.
 
-And it displays all (most) results on a single page, sorted from cheapest to the most expensive ones.
+## Screen share
 
-### Passwords
+If _Google Meet_ or _Microsoft Teams_ are not installed, we can [setup an quick 1-to-1 screen share session on-line](https://www.jitbit.com/screensharing/).
 
-If we need to generate some random password or key, the [RandomKeygen](https://randomkeygen.com/) service seems great!
+All that is needed is to:
 
-Not only it generates **30+ passwords** at once (with each button press or browser refresh), but it also splits them by
-function (i.e. _strong passwords_, _memorable passwords_, _WPA_ or _WEP_ keys, etc.).
+- [Open JitBit's Free Screen Sharing tool's page](https://www.jitbit.com/screensharing/),
+- Click _Share My Screen_ and
+- Send someone the link
 
-### Screen share
+Some remarks:
 
-We can setup an ultra-quick 1-to-1 video meeting (screen share) without any account etc. using [JitBit's Screen Sharing tool](https://www.jitbit.com/screensharing/#6449989286775993220).
-All you need is to: open this page, click _Share My Screen_ and send someone an auto-generated link.
+- This is truly peer-to-peer, no-middle-server connection
+- The generated link is valid and works for first two persons using it only
+- Third or more person using the link will see an empty screen or will break meeting for everyone
 
-This is a truly peer-to-peer solution. Meaning that no server is involved (and no account is needed), but whenever third
-and any following person tries to use the same link, they will hit the wall with never-ending spinner (best case scenario)
-or it will connection for everyone, including people already connected (worst case scenario).
+For multi-user screen shares we need old good _Google Meet_ or _Microsoft Teams_.
 
-### Remote control
+# Developer tools
 
-A big advantage of the above solution in many scenarios is that it is a _read-only screen share_. Meaning that person that
-uses provided link cannot control remote device in any way.
+## Base64
 
-For true remote control of some PC, [Parsec](https://support.parsec.app/hc/en-us/articles/4422936497165) seems like super
-great alternative to idiotic TeamViewer's licenses. It works pretty much the same as TeamViewer (requires a standalone
-software to be installed on both server and all clients, requires an account and sign-in etc.). But it's free plan offers
-much more options. To the point that [paid plans](https://parsec.app/pricing) are not needed in most scenarios. And, if
-even needed, license prices are way, way less insane (in compare to TeamViewer) -- $30 per user/month, paid annually.
+[Base64.Guru](https://base64.guru/) rules!
 
-## Developer tools
+- [Encode](https://base64.guru/converter/encode) Base64 from:
+    - Strings: [text](https://base64.guru/converter/encode/text), [URL](https://base64.guru/converter/encode/url), [HTML](https://base64.guru/converter/encode/html), [hex](https://base64.guru/converter/encode/hex) and [CSS styles](https://base64.guru/converter/encode/css)
+    - Binary: [image](https://base64.guru/converter/encode/image), [audio](https://base64.guru/converter/encode/audio), [video](https://base64.guru/converter/encode/video), [PDF](https://base64.guru/converter/encode/pdf) and any [other file type](https://base64.guru/converter/encode/file)
+- [Decode](https://base64.guru/converter/decode) Base64 to:
+    - Strings: [text](https://base64.guru/converter/decode/text), [hex](https://base64.guru/converter/decode/hex)
+    - Binary: [image](https://base64.guru/converter/decode/image), [audio](https://base64.guru/converter/decode/audio), [video](https://base64.guru/converter/decode/video), [PDF](https://base64.guru/converter/decode/pdf) and [file](https://base64.guru/converter/decode/file)
+- [Play](https://base64.guru/tools/):
+    - [Validate](https://base64.guru/tools/validator) or [repair](https://base64.guru/tools/repair) Base64 string
+    - [Convert data URL](https://base64.guru/tools/data-url-to-image) to image (uri-image) to a file
+    - [Normalize](https://base64.guru/tools/normalization) it, to safely sent it via email (MIME) or use as file name or as a part of URL (Base64URL)
 
-### JavaScript and JSON tools
+Also quick guides on how to work on Base64 in: [Javascript](https://base64.guru/developers/javascript), [PHP](https://base64.guru/developers/php) or how to embed [data-uri](https://base64.guru/developers/data-uri) into a [HTML document](https://base64.guru/developers/html).
 
-Should any of our code include any piece of _JavaScript_ or _JSON_ we can consider these ones:
+## JavaScript
 
-- JavaScript:
-    * [ValidateJavaScript](https://validatejavascript.com/): as name says, good and challenging JavaScript linter
-    * [JSCompress](https://jscompress.com/): strong JavaScript compressor (works on in-line code or uploaded files)
-- JSONCompare: [beautify, minify, sort, save](https://jsoncompare.com/#!/simple/) (for sharing) and [lint](https://jsoncompare.com/#!/simple/)
-  or [compare two sets](https://jsoncompare.com/#!/diff/) (can work on files)
+* [ValidateJavaScript](https://validatejavascript.com/): as name says, good and challenging JavaScript linter
+* [JSCompress](https://jscompress.com/): strong JavaScript compressor (works on in-line code or uploaded files)
 
-Note that these are overloaded with ads. But, nothing is for free. Sorry, _taki mamy klimat_.
+## JSON
 
-### JitBit's CSS and SSL checker
+- JSONCompare:
+    - [One file or doc](https://jsoncompare.com/#!/simple/): beautify, minify, sort, save (for sharing) and lint
+    - [Two files or docs](https://jsoncompare.com/#!/diff/): compare
+- [JSON Editor Online](https://jsoneditoronline.org/):
+    - Edit JSON files in fully WYSIWYG mode with a lot of useful tools
+    - Whole JSON or selected part can be edited as: plain text, tree or table
+    - Save JSON data to cloud (1 MB limit) or to file, send as URL, export to CSV where possible    
+    - [For 3 USD per month](https://jsoneditoronline.org/pricing/) you get add-free and for 6 USD per month you can save private JSONs to the cloud
+- [JSON Studio](https://jsonstudio.io/):
+    - Is slow and has some bugs, but also has some fabulous features
+    - Can minify and format (beautify) JSON with one click (_Others_ button)
+    - Tracks history of your edits which can save your ass in some situations
+    - Can render JSON as a [graphic tree](https://jsonstudio.io/view/json-crack-viewer) (click _Zoom+_ or _Zoom-_ if nothing seems rendered)
+    - Can render JSON as [an expandable table / grid](https://jsonstudio.io/view/json-grid-viewer) (for nested objects has a bug and shows only first column)
+    - Can generate [a class diagram of DB structure](https://jsonstudio.io/view/json-db-viewer) (with relations!) to store your JSON in database
+    - Can [convert](https://jsonstudio.io/convert/JSON-to-CSV-Converter) between JSON, YAML and CSV both ways (nested objects can't be exported to CSV)
+    - Also can [compare two JSONs](https://jsonstudio.io/json-diff-checker) and look for possible differencies
+- [JSON Viewer](https://jsonviewer.ai/) can only validate correctness of a JSON and beautify it
 
-We can use [Unused CSS](https://www.jitbit.com/unusedcss/) scanner to find all obsolete CSS selectors. This is a website
-crawler, so it starts with the provided start page URL and then follows internal links recursively to scan all pages and
-check, if there are any unused CSS selectors there.
+## Markdown
 
-The similar technique is used in [SSL Checker](https://www.jitbit.com/sslcheck/) which recursively to scans all pages and
-pages of a HTTPS-website to find any non-secure image, script or CSS file. That will most likely trigger a "mixed content"
-message in browser.
+GitHub itself has a great Markdown support. But when writing large texts, it is often tiring to constatly swich between editor and preview.
 
-## Tools for testers
+In this case [StackEdit](https://stackedit.io/app#) can be a good replacement:
 
-### Screen capture
+- Renders Markdown as you type
+- Has reach Markdown editor; source colouring and formatting helps editing quicker
+- Supports many keyboards (default are weird, but can be overwritten in settings)
+- Supports workspaces and folders, allows to work over many files at all
+- Can publish documents (as Markdown and HTML) to GitHub, Wordpress, Google Drive, Zendesk and more
+- Able to synchronize workspaces accross devices and users using various sync services
+- Can import and export Markdown or HTML; export to many formats [through Pandoc](https://pandoc.org/index.html) is limited to paid users
+- Has a handy document's table of contents and Markdown cheatsheet
+- Supports simple templates for exporting and publishing
+- When rendering live, offers full support for MermaidJS diagrams [see below](#example)
 
-For quick screen captures, [Microsoft Snipping Tool](https://apps.microsoft.com/store/detail/snipping-tool/9MZ95KL8MR0L)
-(also known as Snip & Sketch) is your friend. It has all that is needed, including quick annotations etc. It comes built-in
-to most recent version of Windows. It only requires one-time setup in [Windows _Ease of Access_ section](https://pureinfotech.com/set-print-screen-key-screenshot-screen-sketch-windows-10/)
-in order to use it with <kbd>PrtSc</kbd> key instead of the default one.
+This is especially important when editing wiki pages, which seems to be a secondary-citizen to GitHub and most valuable functions (that works in repos and issues) doesn't work here (like no support for keyboard shortcuts etc).
 
-To capture entire animation, including mouse clicks etc. we use [free LICPcap](https://www.cockos.com/licecap/). The most
-important feature of it is that it produces _.gif_ animations that can be very easily uploaded to any ticket, page etc.
+## Website optimization
 
-The down side is that it is a separate software that needs to be installed on your computer. An on-line alternative is to
-use [JitBit's Screen Capture](https://www.jitbit.com/screencapture/). In is even quicker for capturing a video describing
-some problem, but it produces _.webm_ video files instead of _.gif_ pictures. So this can't be uploaded to many places.
+- Scan your website for [unused CSS selectors](https://www.jitbit.com/unusedcss/) scanner to find all obsolete CSS selectors
+- Scan your HTTPS-website [to find any non-HTTPS served images](https://www.jitbit.com/sslcheck/) that may trigger a "mixed content" warning
+- This is a website crawler; it starts with provided URL, and then follows all found links recursively to scan all pages
 
-Big advantage of JitBit's tool (and _.webm_ format) is that it allows to record screen capture _with sound_ captured from
-system microphone. Which can be very useful in many scenarios.
+## Screen capture
 
-## Diagrams
+- **Off-line**: [Microsoft Snip & Sketch](https://apps.microsoft.com/store/detail/snipping-tool/9MZ95KL8MR0L) for images and screen-casts
+- Even easier screen-cast capturer, with mouse clicks etc. is [free LICPcap](https://www.cockos.com/licecap/)
+- Both produces image files (_.gif_ animations) that can be very easily uploaded to any ticket, page etc.
+- Must be installed (can't be used on-line) and can't capture sound along with video
+- **On-line**: [JitBit's Screen Capture](https://www.jitbit.com/screencapture/) full on-line video capture tool
+- Produces _.webm_ video files which can't be uploaded to many places (i.e. GitHub rejects them)
+- Since this is a full video format, it can record screen capture _with sound_ captured from system microphone
+- You can convert to _gif_ using [Cloud Convert](https://cloudconvert.com/webm-to-gif), [Convertio](https://convertio.co/webm-gif/), or [Online Coverter](https://image.online-convert.com/convert/webm-to-gif), but this will drop recorded sound
 
-We can use [MermaidJS tool for JavaScript](https://mermaid.js.org/) across entire GitHub (in [issues](https://github.com/ninergames/test-renpy-engine/issues/23),
-[discussions](https://github.com/ninergames/test-renpy-engine/discussions/21) and [in text files](https://github.com/ninergames/test-renpy-engine)).
+# Diagrams
 
-### Example
+We can use [MermaidJS tool for JavaScript](https://mermaid.js.org/) across entire GitHub (in [issues](https://github.com/ninergames/test-renpy-engine/issues/23), [discussions](https://github.com/ninergames/test-renpy-engine/discussions/21) and [in text files](https://github.com/ninergames/test-renpy-engine)).
+
+## Example
 
 ```mermaid
-    flowchart TD
-        A(111) -->|MONEY > 10| B(25)
-        B --> |SSS = 1| C(73)
-        B --> |SSS = 0| D(211)
-        D --> |DIRECTION = Right| E(222)
-        E -->|BATTLE = Won| F(174)
-        E -->|BATTLE = Lost| G(238)    
-        G --> C
-        G --> |"DIRECTION = Left"| D(113)
-        F --> H(151)
-        H --> C
-        click C href "https://mermaid.live/edit" "Mermaid Live Editor"
+flowchart TD;111-->|CASH>10|25;25-->|SSS=1|151;25-->|SSS=0|222;222-->|RESULT=Won|174;222-->|RESULT=Lost|238;238-->151;174-->151; click 174 href "https://mermaid.live/edit"
 ```
 
-The `73` item is clickable and points to → [https://mermaid.live/edit](https://mermaid.live/edit).
+The `174` item is clickable and points to → [https://mermaid.live/edit](https://mermaid.live/edit).
 
-### Source code
+## Source code
 
 Pure MermaidJS code needed to generate the above diagram is:
 
-    flowchart TD
-        A(111) -->|MONEY > 10| B(25)
-        B --> |SSS = 1| C(73)
-        B --> |SSS = 0| D(211)
-        D --> |DIRECTION = Right| E(222)
-        E -->|BATTLE = Won| F(174)
-        E -->|BATTLE = Lost| G(238)    
-        G --> C
-        G --> |"DIRECTION = Left"| D(113)
-        F --> H(151)
-        H --> C
-        click C href "https://mermaid.live/edit" "Mermaid Live Editor"
+```
+flowchart TD
+    111 --> |CASH > 10| 25
+    25 --> |SSS = 1| 151
+    25 --> |SSS = 0| 222
+    222 --> |RESULT = Won| 174
+    222 --> |RESULT = Lost| 238    
+    238 --> 151
+    174 --> 151
+    click 174 href "https://mermaid.live/edit
+```
 
-If you want to put it anywhere (issue, discussion, wiki) you simply embed it as any regular piece of code in Markdown, 
-telling GitHub in the same time that this code is written in `mermaid` language:
+If you don't need clarify in reading, you may minify the above, by replacing new-lines with `;` and removing most spaces:
+
+```
+flowchart TD;111-->|CASH>10|25;25-->|SSS=1|151;25-->|SSS=0|222;222-->|RESULT=Won|174;222-->|RESULT=Lost|238;238-->151;174-->151; click 174 href "https://mermaid.live/edit"
+```
+
+Resulting in a nice one-liner. Which you can put anywhere you wish (issue, discussion, wiki):
 
     ```mermaid
-        (the above MermaidJS code goes here)
+    flowchart TD;111-->|CASH>10|25;25-->|SSS=1|151;25-->|SSS=0|222;222-->|RESULT=Won|174;222-->|RESULT=Lost|238;238-->151;174-->151; click 174 href "https://mermaid.live/edit"
     ```
-You can see this in action, by [editing this page](https://github.com/akademia-slaska/template-repository/edit/main/README.md) 
-and looking at its source code.
+## Tools
 
-### Live editor
+- At <https://mermaid.live/edit> there's an on-the-fly editor which render MermaidJS code as you type it
+- Use [mermaid.ink Generator](https://mermaid.ink/) to "convert" (render) MermaidJS code it into an image and data-uri string.
 
-At <https://mermaid.live/edit> there's an on-the-fly editor which render MermaidJS code as you type it.
+## Other diagram types
 
-Unfold the _Actions_ section in the bottom-left corner to see some cools stuff like an ability to copy image to clipboard
-or download it in PNG or SVG format, load MermaidJS code to selected Gist etc.
-
-### Mermaid Generator
-
-The [mermaid.ink Generator](https://mermaid.ink/) service is a great addition to above! You can feed it with MermaidJS code
-and it will "convert" (render) it into an image. You'll get a regular URL pointing to an image, which you can embed anywhere
-that you wish, i.e.:
-
-- Use in GitHub as a static image instead of live editor
-- Use it in any external tool, service or website etc.
-
-To use URL-related functions, diagrams are first [encoded](https://docs.kroki.io/kroki/setup/encode-diagram/). This handled
-by _mermaid.live_ Live Editor itself.
-
-### Other diagrams
-
-Flowchart diagram presented above is just one of many that MermaidJS supports.
-
-The obvious ones (UML):
-
-- [Sequence Diagram](https://mermaid.live/edit#pako:eNptkLFqAzEMhl9F0VrfC9yQUujQFDp1K16E_V_OYFuJY1NCyLvXd9ds0fQjfZ9AurFTDx75gnNDdngPciySbKZebzE4DPv9y6fOeaQPxKi0ZEOz_pIU0FXb61N4w5zkBaEZUijhH11mQ0eH1emLw2YbOqzGSndt9xw_0AREOhZI3bHhhJIk-H7FbREs1xkJlscePSZpsVq2-d5RaVW_r9nxWEuD4XbyUh9HP5rwoWr52h6z_sfwSfKPakcmiRfc_wC26mTi)
 - [Class Diagram](https://mermaid.live/edit#pako:eNptkc9OwzAMxl8l8glE-wIVF8SYxGGn3aZKyE28LmrijPzRBGPvTlrWMDZySfyzP-uLfQTpFEED0mAIC429R9uyyOeJtUUjHr_qWiySHG7pUofdLd1Q5_EPbsSD5iiwp2u8jl5zL3piRf4yOUrCCm1-3t1fJSxGmuFke7J3_AGiNO0Ih2dnnC-JcNB2FubwPaEc5vh02W_8WOlXj96D_qRXXhLFgiXyC8Z_9dMIfg11zhmhw9tBG1WgT1y0UIElb1GrvIlJ10LckaUWmvxUtMVkYgstj6WYolt_sIQm-kQVpL3KEznvboakdHR-dV7ueFWwR944l0u2aAKdvgFIMZyC)
+- [Sequence Diagram](https://mermaid.live/edit#pako:eNptkLFqAzEMhl9F0VrfC9yQUujQFDp1K16E_V_OYFuJY1NCyLvXd9ds0fQjfZ9AurFTDx75gnNDdngPciySbKZebzE4DPv9y6fOeaQPxKi0ZEOz_pIU0FXb61N4w5zkBaEZUijhH11mQ0eH1emLw2YbOqzGSndt9xw_0AREOhZI3bHhhJIk-H7FbREs1xkJlscePSZpsVq2-d5RaVW_r9nxWEuD4XbyUh9HP5rwoWr52h6z_sfwSfKPakcmiRfc_wC26mTi)
 - [Simple State Machine Diagram](https://mermaid.live/edit#pako:eNpdjz0LgzAQhv-K3Fh06ejQpV2d3No4HObUQD4kXoQi_vemCdJipofn3gv3btA7SVDDwsj0UDh6NNV6FbaI73Xpiqq6FS0rrbNKmGQcnlXjVmXHbDOf1__s3eMyZZvw-BRKMOQNKhnP2r4BATyRIQF1REkDBs0ChN1jFAO79m17qNkHKiHM8lfkkCQVO9_kpqlwCTPap3MxMqBeaP8ArztTOA)
-
-Some less often used:
-
 - [Entity Relation Diagram](https://mermaid.live/edit#pako:eNp10VFrgzAQB_CvEu5Z-wF8KxqGMOeIttCRl8ycbUCNpLEw1O--WA1bO5a3HL_7J9yNUGmJEAGaRImzES3viDvxoSjzjDIyT7vdNJKEvqZHyk7hPkkYLQoSkYu4PtlpCkM9kpwl7hKRvhEV_mPSt2OextQpDo0Snw2SWhsOq_7z2lOywQrVzWf7rAVNP6jSNzQbWWu_QZiWNHNKdVUzSB_1zvLkEJdhvC_pS85OvmWr31M7K1T36B_-55M5aCPRoHRvcIAAWjStUNINe1y6OdgLtshhoRJrMTR2GcDsqBisLr66CiJrBgxg6KWwuG3IF1Eqq0227u--xgB60X1o7UgtmivO35Pxk64)
-- [User Journey](https://mermaid.live/edit#pako:eNplULEKg0AM_ZWQ2aWULrdW6OTkVlyCl9arepEzR5HSf--pFSzNFN57eY-8F9ZiGQ0-JAbPU-UhjTrtGIoJnhJa5-9g6cuMXKsTDxcBlYVecYCCWgZlMnAyUPAGJ2EcRiUXRgPHPZOv9wYOM5rBmfQvo5F-72Tl6Tevn5TS6UJ-IzDDnkNPzqbPXrOoQm04eaFJq-UbxU4rrPw7SSmqlJOv0WiInGEcLCnnju6B-g1k61RCsZa1dJbhQP4qkiQ36kZ-fwCt22h_)
+- [User Journey Diagram](https://mermaid.live/edit#pako:eNplULEKg0AM_ZWQ2aWULrdW6OTkVlyCl9arepEzR5HSf--pFSzNFN57eY-8F9ZiGQ0-JAbPU-UhjTrtGIoJnhJa5-9g6cuMXKsTDxcBlYVecYCCWgZlMnAyUPAGJ2EcRiUXRgPHPZOv9wYOM5rBmfQvo5F-72Tl6Tevn5TS6UJ-IzDDnkNPzqbPXrOoQm04eaFJq-UbxU4rrPw7SSmqlJOv0WiInGEcLCnnju6B-g1k61RCsZa1dJbhQP4qkiQ36kZ-fwCt22h_)
 - [Pie Diagram](https://mermaid.live/edit#pako:eNo1j8sKwjAQRX8lzLobEaVka7eC6E6yGZtpDeRFMhFK6b8bLZnV5XDg3llhDJpAQjQk2LAlcSPOAnWITFq8FvEJtngmSll5UU_BEOasQEhx7M-NXZB31p8aujd0OEEHjpJDo2vV-hMU8JscKZA1apqwWFag_FZVLBweix9BcirUQYkamQaDc0LXIGnDIV339f8nOojonyFUZUKbafsCDfBG3g)
 
-The [User Journey](https://mermaid.live/edit#pako:eNplULEKg0AM_ZWQ2aWULrdW6OTkVlyCl9arepEzR5HSf--pFSzNFN57eY-8F9ZiGQ0-JAbPU-UhjTrtGIoJnhJa5-9g6cuMXKsTDxcBlYVecYCCWgZlMnAyUPAGJ2EcRiUXRgPHPZOv9wYOM5rBmfQvo5F-72Tl6Tevn5TS6UJ-IzDDnkNPzqbPXrOoQm04eaFJq-UbxU4rrPw7SSmqlJOv0WiInGEcLCnnju6B-g1k61RCsZa1dJbhQP4qkiQ36kZ-fwCt22h_)-type 
-diagram can be used in many scenarios. For example, to denote results of some poll etc. in more complex / other form than
-[Pie Diagram](https://mermaid.live/edit#pako:eNo1j8sKwjAQRX8lzLobEaVka7eC6E6yGZtpDeRFMhFK6b8bLZnV5XDg3llhDJpAQjQk2LAlcSPOAnWITFq8FvEJtngmSll5UU_BEOasQEhx7M-NXZB31p8aujd0OEEHjpJDo2vV-hMU8JscKZA1apqwWFag_FZVLBweix9BcirUQYkamQaDc0LXIGnDIV339f8nOojonyFUZUKbafsCDfBG3g)
-offers.
+The [User Journey Diagram](https://mermaid.live/edit#pako:eNplULEKg0AM_ZWQ2aWULrdW6OTkVlyCl9arepEzR5HSf--pFSzNFN57eY-8F9ZiGQ0-JAbPU-UhjTrtGIoJnhJa5-9g6cuMXKsTDxcBlYVecYCCWgZlMnAyUPAGJ2EcRiUXRgPHPZOv9wYOM5rBmfQvo5F-72Tl6Tevn5TS6UJ-IzDDnkNPzqbPXrOoQm04eaFJq-UbxU4rrPw7SSmqlJOv0WiInGEcLCnnju6B-g1k61RCsZa1dJbhQP4qkiQ36kZ-fwCt22h_) can be also used for example, to denote results of some poll etc.
 
-All mentioned diagram types can be used anywhere within GitHub (in [issues](https://github.com/ninergames/test-renpy-engine/issues/23), [discussions](https://github.com/ninergames/test-renpy-engine/discussions/21) and [even in text files](https://github.com/ninergames/test-renpy-engine)).
-
-### Kroki.io service
+## Kroki.io service
 
 We can use this service for:
 
 - All other diagram types that MermaidJS doesn't support
 - All diagrams that for some reason we want to generate in other language than MermaidJS
-
-In this case we will end up with the generated static image, which we must paste directly to GitHub.
+- All diagrams that in some scenario we need to use as a static image instead of editable code
 
 Some other diagrams (not available in MermaidJS) that are worth considering includes:
 
-- [MindMap diagram in PlantUML](https://kroki.io/examples.html#mind-map) (looks better than the one generated in MermaidJS)
 - [Syntax diagram in Pikchr](https://kroki.io/examples.html#syntax)
 - [Container diagram in C4 PlantUML](https://kroki.io/examples.html#c4-container) (for drawing system architectures)
 - [Component diagram in C4 PlantUML](https://kroki.io/examples.html#c4-component) (can be used for drawing nearly everything)
-- [Word Cloud diagram in Vega](https://kroki.io/examples.html#word-cloud) (more-like for marketing issues etc.)
+- [MindMap diagram in PlantUML](https://kroki.io/examples.html#mind-map) (looks better than the one generated in MermaidJS)
 
-And many more. Kroki.io supports [20+ languages](https://kroki.io/#support) and for certain languages (but not for MermaidJS)
-it allows rendering diagrams in PDF or TXT formats or as base64-encoded streams.
+And many more. Kroki.io supports [20+ languages](https://kroki.io/#support) and for certain languages (but not for MermaidJS) it allows rendering diagrams in PDF or TXT formats or as base64-encoded streams.
 
-## Releases
+# Releases
 
 All the details are given in [Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
 
@@ -264,18 +240,3 @@ In short:
 GitHub **always adds a source code** to release. We **must always treat** all our releases **purely as private**.
 
 Note that `git push --tags` pushes tags **only**. If you have some unpushed commits in the same time, you should send them next, using regular `git push`.
-
-## Table of Contents
-
-As you can see, this README file is really long, logically separated into many sections and subsections. We need to have 
-an option to generate table of contents in such case.
-
-GitHub handles this for us. It auto-generates TOCs [for README file](https://github.blog/changelog/2021-04-13-table-of-contents-support-in-markdown-files/)
-and for [Wiki pages](https://twitter.com/github/status/1428466581554745352).
-
-You can browse contests of this document by clicking the _Contents_ button to the left of this document title:
-
-![Example of table of contents feature in GitHub for readme files](https://th.bing.com/th/id/R.044342b491180a79ff75a058c96b6a29?rik=u9%2bWqKLY34TseA&riu=http%3a%2f%2fdocs.github.com%2fassets%2fimages%2fhelp%2frepository%2freadme-automatic-toc.png&ehk=kudK3FMT5GIYv4PsH6YVdKBtxt3qi37dhmQq9fhelEo%3d&risl=&pid=ImgRaw&r=0)
-
-Or you can get a [manually-generated in-line TOCs](https://ecotrust-canada.github.io/markdown-toc/) and copy-paste it to
-and file, issue, doc or text.

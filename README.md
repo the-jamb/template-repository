@@ -1,8 +1,8 @@
 <!--suppress ALL -->
 
 <p align="center">
-    <a href="https://www.ninergames.com/" target="_blank">
-        <img src="https://github.com/the-jamb/template-repository/assets/2903392/3ee5f383-ebab-42bc-9204-0ed2c2b550de" alt="Logo of Jamb" width="300" height="300">
+    <a href="https://www.jamb.pl/" target="_blank">
+        <img src="https://github.com/the-jamb/template-repository/assets/2903392/3ee5f383-ebab-42bc-9204-0ed2c2b550de" alt="Logo of Jamb" width="400" height="400">
     </a><br />
 </p>
 

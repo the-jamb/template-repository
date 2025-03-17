@@ -2,11 +2,15 @@
 
 <p align="center">
     <a href="https://www.ninergames.com/" target="_blank">
-        <img src="https://github.com/the-jamb/template-repository/assets/2903392/3ee5f383-ebab-42bc-9204-0ed2c2b550de" alt="Logo of AI Metric" width="500" height="500">
+        <img src="https://github.com/the-jamb/template-repository/assets/2903392/3ee5f383-ebab-42bc-9204-0ed2c2b550de" alt="Logo of Jamb" width="500" height="500">
     </a><br />
 </p>
 
-<h1 align="center">Jamb Template Repository</h1><br />
+<p align="center">
+    <img src="TITLE.svg" width="600" height="63" alt="Animated Title: Template Repository">
+</p>
+
+<hr>
 
 This is a template repository that contains information mostly on technical stuff etc. Feel free to rip off this  part 
 (or any other in this document) and replace it with actual content about your repository.

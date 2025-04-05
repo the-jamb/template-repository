@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-    <img src="TITLE.svg" width="600" height="63" alt="Template Repository">
+    <img src="TITLE.svg" width="600" height="63" alt="Jamb: Template Repository">
 </p>
 
 <hr>

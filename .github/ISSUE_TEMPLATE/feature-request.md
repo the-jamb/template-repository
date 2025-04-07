@@ -2,6 +2,7 @@
 name: Feature request
 about: Some new functionality
 title: 
+type: "feature"
 labels: feature
 assignees: mrfatguy
 

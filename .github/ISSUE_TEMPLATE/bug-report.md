@@ -2,6 +2,7 @@
 name: Bug report
 about: Something is wrong
 title: 
+type: "bug"
 labels: bug
 assignees: mrfatguy
 

@@ -1,3 +1,4 @@
+@echo off
 REM This script does two main things:
 REM
 REM 1. If run in a location containing the .github folder, it commits its contents to the chosen repo.
@@ -16,7 +17,6 @@ REM Run this script via: INITIALIZE user/repo
 REM
 REM Visit https://ninergames.com/ or spread the word if you want to say “thank you”. Thank you.
 
-@echo off
 setlocal enabledelayedexpansion
 
 REM === CHECK INPUT ===
